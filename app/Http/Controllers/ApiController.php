@@ -48,7 +48,7 @@ class ApiController extends Controller
       return response()->json($response,200);
     }
     public function logout(Request $request) {
-      $token = $request->user()->token();
+      $token = $request->user()->token(); 
       $token->revoke();
       $response = ["message"  => "You have successfully logout!!"];
       return response()->json($response,200);
